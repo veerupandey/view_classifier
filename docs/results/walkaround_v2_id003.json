@@ -1,0 +1,91 @@
+{
+  "identity": 3,
+  "split": "test",
+  "ckpt": "artifacts/joint_v2_zenodo_crop/view_classifier_best.pt",
+  "ckpt_epoch": 10,
+  "out": "artifacts/examples/walkaround_v2_id003.png",
+  "bins_correct": 8,
+  "mean_cmae_deg": 3.05,
+  "views": [
+    {
+      "path": "test/id003_01083.jpg",
+      "true": "front",
+      "true_ang": 0.0,
+      "pred": "front",
+      "pred_ang": 358.8,
+      "conf": 0.93,
+      "err": 1.19,
+      "ok": true
+    },
+    {
+      "path": "test/id003_01128.jpg",
+      "true": "front_right",
+      "true_ang": 45.0,
+      "pred": "front_right",
+      "pred_ang": 39.6,
+      "conf": 0.926,
+      "err": 5.35,
+      "ok": true
+    },
+    {
+      "path": "test/id003_01173.jpg",
+      "true": "right",
+      "true_ang": 90.0,
+      "pred": "right",
+      "pred_ang": 92.3,
+      "conf": 0.943,
+      "err": 2.28,
+      "ok": true
+    },
+    {
+      "path": "test/id003_01218.jpg",
+      "true": "rear_right",
+      "true_ang": 135.0,
+      "pred": "rear_right",
+      "pred_ang": 141.4,
+      "conf": 0.934,
+      "err": 6.42,
+      "ok": true
+    },
+    {
+      "path": "test/id003_01263.jpg",
+      "true": "rear",
+      "true_ang": 180.0,
+      "pred": "rear",
+      "pred_ang": 176.8,
+      "conf": 0.934,
+      "err": 3.23,
+      "ok": true
+    },
+    {
+      "path": "test/id003_01308.jpg",
+      "true": "rear_left",
+      "true_ang": 225.0,
+      "pred": "rear_left",
+      "pred_ang": 222.9,
+      "conf": 0.933,
+      "err": 2.07,
+      "ok": true
+    },
+    {
+      "path": "test/id003_01353.jpg",
+      "true": "left",
+      "true_ang": 270.0,
+      "pred": "left",
+      "pred_ang": 270.5,
+      "conf": 0.932,
+      "err": 0.46,
+      "ok": true
+    },
+    {
+      "path": "test/id003_01398.jpg",
+      "true": "front_left",
+      "true_ang": 315.0,
+      "pred": "front_left",
+      "pred_ang": 311.6,
+      "conf": 0.934,
+      "err": 3.38,
+      "ok": true
+    }
+  ]
+}

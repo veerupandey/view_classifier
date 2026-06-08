@@ -1,0 +1,152 @@
+{
+  "ckpt": "artifacts/joint_v2_zenodo_crop/view_classifier_best.pt",
+  "manifest": "data/cfv/manifest_zenodo.json",
+  "image_root": "data/cfv/images_v2",
+  "split": "val",
+  "classes": [
+    "front",
+    "front_right",
+    "right",
+    "rear_right",
+    "rear",
+    "rear_left",
+    "left",
+    "front_left"
+  ],
+  "n_images": 4693,
+  "n_cars": 13,
+  "micro_accuracy": 0.9359,
+  "micro_cmae_deg": 3.812,
+  "mean_over_cars_accuracy": 0.9359,
+  "mean_over_cars_cmae_deg": 3.812,
+  "worst_cars": [
+    {
+      "identity": 1,
+      "n": 361,
+      "accuracy": 0.9003,
+      "cmae_deg": 4.512,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 59,
+      "n": 361,
+      "accuracy": 0.903,
+      "cmae_deg": 6.557,
+      "adjacent_or_correct": 0.9917
+    },
+    {
+      "identity": 43,
+      "n": 361,
+      "accuracy": 0.9086,
+      "cmae_deg": 5.491,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 54,
+      "n": 361,
+      "accuracy": 0.9197,
+      "cmae_deg": 3.978,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 61,
+      "n": 361,
+      "accuracy": 0.9224,
+      "cmae_deg": 4.672,
+      "adjacent_or_correct": 1.0
+    }
+  ],
+  "cars": [
+    {
+      "identity": 1,
+      "n": 361,
+      "accuracy": 0.9003,
+      "cmae_deg": 4.512,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 2,
+      "n": 361,
+      "accuracy": 0.9474,
+      "cmae_deg": 3.087,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 5,
+      "n": 361,
+      "accuracy": 0.9474,
+      "cmae_deg": 2.587,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 6,
+      "n": 361,
+      "accuracy": 0.9612,
+      "cmae_deg": 3.089,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 13,
+      "n": 361,
+      "accuracy": 0.9474,
+      "cmae_deg": 3.276,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 27,
+      "n": 361,
+      "accuracy": 0.9529,
+      "cmae_deg": 2.377,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 32,
+      "n": 361,
+      "accuracy": 0.9668,
+      "cmae_deg": 2.358,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 34,
+      "n": 361,
+      "accuracy": 0.9363,
+      "cmae_deg": 4.001,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 37,
+      "n": 361,
+      "accuracy": 0.9529,
+      "cmae_deg": 3.574,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 43,
+      "n": 361,
+      "accuracy": 0.9086,
+      "cmae_deg": 5.491,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 54,
+      "n": 361,
+      "accuracy": 0.9197,
+      "cmae_deg": 3.978,
+      "adjacent_or_correct": 1.0
+    },
+    {
+      "identity": 59,
+      "n": 361,
+      "accuracy": 0.903,
+      "cmae_deg": 6.557,
+      "adjacent_or_correct": 0.9917
+    },
+    {
+      "identity": 61,
+      "n": 361,
+      "accuracy": 0.9224,
+      "cmae_deg": 4.672,
+      "adjacent_or_correct": 1.0
+    }
+  ]
+}

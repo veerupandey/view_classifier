@@ -1,0 +1,91 @@
+{
+  "identity": 54,
+  "split": "val",
+  "ckpt": "artifacts/joint_v2_zenodo_crop/view_classifier_best.pt",
+  "ckpt_epoch": 10,
+  "out": "artifacts/examples/walkaround_v2_id054.png",
+  "bins_correct": 8,
+  "mean_cmae_deg": 4.2,
+  "views": [
+    {
+      "path": "val/id054_14440.jpg",
+      "true": "front",
+      "true_ang": 0.0,
+      "pred": "front",
+      "pred_ang": 0.4,
+      "conf": 0.933,
+      "err": 0.36,
+      "ok": true
+    },
+    {
+      "path": "val/id054_14485.jpg",
+      "true": "front_right",
+      "true_ang": 45.0,
+      "pred": "front_right",
+      "pred_ang": 35.8,
+      "conf": 0.934,
+      "err": 9.19,
+      "ok": true
+    },
+    {
+      "path": "val/id054_14530.jpg",
+      "true": "right",
+      "true_ang": 90.0,
+      "pred": "right",
+      "pred_ang": 91.8,
+      "conf": 0.935,
+      "err": 1.76,
+      "ok": true
+    },
+    {
+      "path": "val/id054_14575.jpg",
+      "true": "rear_right",
+      "true_ang": 135.0,
+      "pred": "rear_right",
+      "pred_ang": 139.1,
+      "conf": 0.922,
+      "err": 4.06,
+      "ok": true
+    },
+    {
+      "path": "val/id054_14620.jpg",
+      "true": "rear",
+      "true_ang": 180.0,
+      "pred": "rear",
+      "pred_ang": 177.9,
+      "conf": 0.934,
+      "err": 2.1,
+      "ok": true
+    },
+    {
+      "path": "val/id054_14665.jpg",
+      "true": "rear_left",
+      "true_ang": 225.0,
+      "pred": "rear_left",
+      "pred_ang": 217.5,
+      "conf": 0.938,
+      "err": 7.54,
+      "ok": true
+    },
+    {
+      "path": "val/id054_14710.jpg",
+      "true": "left",
+      "true_ang": 270.0,
+      "pred": "left",
+      "pred_ang": 270.0,
+      "conf": 0.918,
+      "err": 0.03,
+      "ok": true
+    },
+    {
+      "path": "val/id054_14755.jpg",
+      "true": "front_left",
+      "true_ang": 315.0,
+      "pred": "front_left",
+      "pred_ang": 323.5,
+      "conf": 0.924,
+      "err": 8.53,
+      "ok": true
+    }
+  ]
+}

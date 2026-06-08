@@ -1,0 +1,200 @@
+{
+  "ckpt": "artifacts/joint_v2_zenodo_crop/view_classifier_best.pt",
+  "ckpt_epoch": 10,
+  "images": "data/claim_demo_clean",
+  "n": 12,
+  "predictions": [
+    {
+      "path": "01_wiki_00050_Vehicle_After_a_Side-Impact_C.jpg",
+      "pred": "left",
+      "pred_ang": 295.9,
+      "conf": 0.882,
+      "probs": {
+        "front": 0.011,
+        "front_right": 0.019,
+        "right": 0.01,
+        "rear_right": 0.016,
+        "rear": 0.004,
+        "rear_left": 0.009,
+        "left": 0.882,
+        "front_left": 0.049
+      }
+    },
+    {
+      "path": "02_wiki_00017_Damaged_car_on_road_Dubai_01..jpg",
+      "pred": "rear",
+      "pred_ang": 175.0,
+      "conf": 0.52,
+      "probs": {
+        "front": 0.29,
+        "front_right": 0.009,
+        "right": 0.044,
+        "rear_right": 0.051,
+        "rear": 0.52,
+        "rear_left": 0.047,
+        "left": 0.005,
+        "front_left": 0.033
+      }
+    },
+    {
+      "path": "03_wiki_00023_Jeep_Grand_Cherokee__Manhatta.jpg",
+      "pred": "front_right",
+      "pred_ang": 30.5,
+      "conf": 0.536,
+      "probs": {
+        "front": 0.329,
+        "front_right": 0.536,
+        "right": 0.021,
+        "rear_right": 0.029,
+        "rear": 0.02,
+        "rear_left": 0.017,
+        "left": 0.03,
+        "front_left": 0.016
+      }
+    },
+    {
+      "path": "04_wiki_00034_Car_collision_with_tree.jpg.jpg",
+      "pred": "rear_left",
+      "pred_ang": 236.9,
+      "conf": 0.607,
+      "probs": {
+        "front": 0.017,
+        "front_right": 0.052,
+        "right": 0.018,
+        "rear_right": 0.083,
+        "rear": 0.022,
+        "rear_left": 0.607,
+        "left": 0.043,
+        "front_left": 0.158
+      }
+    },
+    {
+      "path": "05_wiki_00022_Front_crashed_SLK.jpg.jpg",
+      "pred": "front_left",
+      "pred_ang": 296.6,
+      "conf": 0.898,
+      "probs": {
+        "front": 0.009,
+        "front_right": 0.01,
+        "right": 0.019,
+        "rear_right": 0.018,
+        "rear": 0.009,
+        "rear_left": 0.009,
+        "left": 0.027,
+        "front_left": 0.898
+      }
+    },
+    {
+      "path": "06_wiki_00014_Crash_test_car_from_the_West_.jpg",
+      "pred": "front_left",
+      "pred_ang": 300.0,
+      "conf": 0.925,
+      "probs": {
+        "front": 0.006,
+        "front_right": 0.011,
+        "right": 0.011,
+        "rear_right": 0.014,
+        "rear": 0.007,
+        "rear_left": 0.014,
+        "left": 0.012,
+        "front_left": 0.925
+      }
+    },
+    {
+      "path": "07_wiki_00018_Damaged_car_on_road_Dubai_02..jpg",
+      "pred": "rear_left",
+      "pred_ang": 221.0,
+      "conf": 0.924,
+      "probs": {
+        "front": 0.011,
+        "front_right": 0.01,
+        "right": 0.013,
+        "rear_right": 0.016,
+        "rear": 0.006,
+        "rear_left": 0.924,
+        "left": 0.009,
+        "front_left": 0.012
+      }
+    },
+    {
+      "path": "08_wiki_00036_Crashed_black_S-Class.jpg.jpg",
+      "pred": "front_left",
+      "pred_ang": 317.7,
+      "conf": 0.916,
+      "probs": {
+        "front": 0.009,
+        "front_right": 0.015,
+        "right": 0.013,
+        "rear_right": 0.013,
+        "rear": 0.012,
+        "rear_left": 0.012,
+        "left": 0.01,
+        "front_left": 0.916
+      }
+    },
+    {
+      "path": "09_wiki_00147_CarWrappedAroundTreeBauregard.jpg",
+      "pred": "rear",
+      "pred_ang": 212.5,
+      "conf": 0.229,
+      "probs": {
+        "front": 0.219,
+        "front_right": 0.049,
+        "right": 0.078,
+        "rear_right": 0.117,
+        "rear": 0.229,
+        "rear_left": 0.13,
+        "left": 0.157,
+        "front_left": 0.02
+      }
+    },
+    {
+      "path": "10_wiki_00007_Zdiby__automobil.jpg.jpg",
+      "pred": "front_left",
+      "pred_ang": 325.5,
+      "conf": 0.888,
+      "probs": {
+        "front": 0.026,
+        "front_right": 0.016,
+        "right": 0.018,
+        "rear_right": 0.015,
+        "rear": 0.01,
+        "rear_left": 0.014,
+        "left": 0.013,
+        "front_left": 0.888
+      }
+    },
+    {
+      "path": "11_wiki_00060_Howth__Co._Dublin_-_Ireland__.jpg",
+      "pred": "rear",
+      "pred_ang": 176.9,
+      "conf": 0.47,
+      "probs": {
+        "front": 0.12,
+        "front_right": 0.042,
+        "right": 0.066,
+        "rear_right": 0.174,
+        "rear": 0.47,
+        "rear_left": 0.037,
+        "left": 0.068,
+        "front_left": 0.024
+      }
+    },
+    {
+      "path": "12_wiki_00062_Roadside_Assistance_in_New_Yo.jpg",
+      "pred": "rear_right",
+      "pred_ang": 112.2,
+      "conf": 0.716,
+      "probs": {
+        "front": 0.025,
+        "front_right": 0.077,
+        "right": 0.057,
+        "rear_right": 0.716,
+        "rear": 0.032,
+        "rear_left": 0.052,
+        "left": 0.026,
+        "front_left": 0.014
+      }
+    }
+  ]
+}

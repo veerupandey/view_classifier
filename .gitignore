@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+*.log
+
+# Local datasets (multi-GB)
+data/
+
+# Local training runs / weights
+artifacts/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Keep docs figures/results tracked (do not ignore docs/)
+!docs/
+!docs/**
