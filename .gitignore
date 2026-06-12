@@ -18,6 +18,9 @@ artifacts/
 *.ckpt
 *.safetensors
 
-# Keep docs figures/results tracked (do not ignore docs/)
+# Jupyter
+.ipynb_checkpoints/
+
+# Keep docs figures/results/demo images tracked
 !docs/
 !docs/**

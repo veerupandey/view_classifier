@@ -46,9 +46,28 @@ Python **3.12** recommended (Torch wheels). From repo root:
 python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pip install -r requirements-demo.txt   # Gradio app + notebook
 ```
 
-Infer on a folder of photos (after you place a checkpoint at the path below):
+### Live demo app (best for showing people)
+
+```bash
+PYTHONPATH=. .venv/bin/python -m view_classifier.app
+# open http://127.0.0.1:7860
+# optional temporary public link:
+PYTHONPATH=. .venv/bin/python -m view_classifier.app --share
+```
+
+Upload a photo or click a sample in `docs/demo_images/`. Needs checkpoint  
+`artifacts/joint_v2_zenodo_crop/view_classifier_best.pt` (local, gitignored).
+
+### Notebook walkthrough
+
+```bash
+PYTHONPATH=. .venv/bin/jupyter notebook notebooks/view_classifier_demo.ipynb
+```
+
+Infer on a folder of photos (CLI):
 
 ```bash
 PYTHONPATH=. .venv/bin/python -m view_classifier.infer_folder \
