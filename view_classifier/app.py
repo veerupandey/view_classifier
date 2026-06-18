@@ -49,6 +49,11 @@ def run_predict(image: Image.Image | None, ckpt: str, device: str):
 
 def build_app(ckpt: Path, device: str) -> gr.Blocks:
     examples = [str(p) for p in list_demo_images()]
+    # Prefer repo-relative path in the UI (cleaner for demos / screenshots).
+    try:
+        ckpt_display = str(ckpt.resolve().relative_to(Path.cwd().resolve()))
+    except ValueError:
+        ckpt_display = str(ckpt)
     with gr.Blocks(title="Vehicle View Classifier") as demo:
         gr.Markdown(
             """
@@ -66,7 +71,7 @@ Personal research demo — not a product.
         with gr.Row():
             with gr.Column(scale=1):
                 image = gr.Image(type="pil", label="Photo", height=360)
-                ckpt_box = gr.Textbox(value=str(ckpt), label="Checkpoint path")
+                ckpt_box = gr.Textbox(value=ckpt_display, label="Checkpoint path")
                 device_box = gr.Dropdown(
                     choices=["auto", "mps", "cuda", "cpu"],
                     value=device,

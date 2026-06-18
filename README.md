@@ -51,7 +51,10 @@ pip install -r requirements-demo.txt   # Gradio app + notebook
 
 ### Live demo app (best for showing people)
 
+See the timed script in [`docs/DEMO.md`](docs/DEMO.md). Before guests arrive:
+
 ```bash
+PYTHONPATH=. .venv/bin/python -m view_classifier.demo_selftest   # must PASS
 PYTHONPATH=. .venv/bin/python -m view_classifier.app
 # open http://127.0.0.1:7860
 # optional temporary public link:
