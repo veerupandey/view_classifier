@@ -4,14 +4,13 @@
 
 Developed on Apple Silicon (M4 Max, MPS). Defaults keep system RAM near **`--mem-fraction 0.55`**. Long runs use `--batch-size 8 --accum 4` (probe may reduce batch further).
 
-## Checkpoints (local only)
+## Checkpoints
 
-| File | Role |
-|---|---|
-| `view_classifier_best.pt` | Best CFV val accuracy |
-| `view_classifier_last.pt` | Full train state each epoch (resume) |
-
-Both are gitignored. Copy them yourself if you need weights on another machine.
+| File | Role | In git? |
+|---|---|---|
+| `models/joint_v2_best.pt` | Release / demo weight | **Yes (LFS)** |
+| `artifacts/.../view_classifier_best.pt` | Local training best | No |
+| `artifacts/.../view_classifier_last.pt` | Full train state each epoch (resume) | No |
 
 ## Resume / auto-resume
 

@@ -11,12 +11,16 @@ __pycache__/
 # Local datasets (multi-GB)
 data/
 
-# Local training runs / weights
+# Local training runs
 artifacts/
+
+# Weights default-ignored; release copies under models/ use Git LFS
 *.pt
 *.pth
 *.ckpt
 *.safetensors
+!models/
+!models/*.pt
 
 # Jupyter
 .ipynb_checkpoints/
