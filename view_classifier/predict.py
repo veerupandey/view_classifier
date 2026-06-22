@@ -14,17 +14,24 @@ from view_classifier.train import resolve_device
 from view_classifier.transforms_cfv import eval_tensorize, square_reflect_crop
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_CKPT = REPO_ROOT / "artifacts" / "joint_v2_zenodo_crop" / "view_classifier_best.pt"
+DEFAULT_CKPT = REPO_ROOT / "models" / "joint_v2_best.pt"
+# Fallback if someone only has a local training run
+_FALLBACK_CKPT = REPO_ROOT / "artifacts" / "joint_v2_zenodo_crop" / "view_classifier_best.pt"
 DEMO_IMAGE_DIR = REPO_ROOT / "docs" / "demo_images"
 
 
 @lru_cache(maxsize=2)
 def load_model(ckpt: str, device: str = "auto"):
-    path = Path(ckpt)
+    requested = Path(ckpt)
+    candidates = [requested]
+    if not requested.is_absolute():
+        candidates.append(REPO_ROOT / requested)
+    candidates.extend([DEFAULT_CKPT, _FALLBACK_CKPT])
+    path = next((p for p in candidates if p.exists()), requested)
     if not path.exists():
         raise FileNotFoundError(
-            f"Checkpoint not found: {path}\n"
-            "Train or copy view_classifier_best.pt to that path first."
+            f"Checkpoint not found: {requested}\n"
+            "Expected models/joint_v2_best.pt (Git LFS) or a local artifacts/ path."
         )
     dev = resolve_device(device)
     model = ConvNeXtViewClassifier(pretrained=False).to(dev)

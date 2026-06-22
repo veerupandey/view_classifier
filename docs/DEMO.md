@@ -2,7 +2,7 @@
 
 **Goal:** In ~8 minutes, show that the view model works on real damage photos, explain angle/confidence, and be honest about failure modes.
 
-**Props:** Gradio app at http://127.0.0.1:7860 · checkpoint `artifacts/joint_v2_zenodo_crop/view_classifier_best.pt` · samples in `docs/demo_images/`.
+**Props:** Gradio app at http://127.0.0.1:7860 · checkpoint `models/joint_v2_best.pt` (Git LFS) · samples in `docs/demo_images/`.
 
 ## Runbook (before people arrive)
 

@@ -23,6 +23,10 @@ from view_classifier.predict import (
     predict_image,
 )
 
+# Keep in sync with predict._FALLBACK_CKPT
+_FALLBACK_CKPT = DEFAULT_CKPT.parent.parent / "artifacts" / "joint_v2_zenodo_crop" / "view_classifier_best.pt"
+
+
 # Soft expectations for curated Wikimedia samples (pose must match; conf band).
 EXPECTATIONS: dict[str, dict] = {
     "01_wiki_00050_Vehicle_After_a_Side-Impact_C.jpg": {
@@ -61,10 +65,11 @@ def _fail(msg: str, errors: list[str]) -> None:
 
 def check_assets(errors: list[str]) -> list[Path]:
     print("[1/4] Assets", flush=True)
-    if not DEFAULT_CKPT.exists():
-        _fail(f"missing checkpoint {DEFAULT_CKPT}", errors)
+    if not DEFAULT_CKPT.exists() and not _FALLBACK_CKPT.exists():
+        _fail(f"missing checkpoint {DEFAULT_CKPT} (and no artifacts fallback)", errors)
     else:
-        _ok(f"checkpoint {DEFAULT_CKPT.name} ({DEFAULT_CKPT.stat().st_size // 10**6} MB)")
+        path = DEFAULT_CKPT if DEFAULT_CKPT.exists() else _FALLBACK_CKPT
+        _ok(f"checkpoint {path} ({path.stat().st_size // 10**6} MB)")
     images = list_demo_images()
     if len(images) < 8:
         _fail(f"need ≥8 demo images in {DEMO_IMAGE_DIR}, found {len(images)}", errors)

@@ -9,7 +9,8 @@ The model predicts:
 
 **Angle convention** (Catruna / CFV): **0° = vehicle front**, increasing **clockwise**, **90° = vehicle right** (passenger side on LHD). No horizontal flip — it would swap left and right.
 
-Published evaluation numbers, figures, and demo outputs live under [`docs/`](docs/). Training weights and raw datasets stay **out of git** (see [`.gitignore`](.gitignore)).
+Published evaluation numbers, figures, and demo outputs live under [`docs/`](docs/).  
+Release weights: [`models/joint_v2_best.pt`](models/joint_v2_best.pt) via **Git LFS**. Raw training data and `artifacts/` stay **out of git** (see [`.gitignore`](.gitignore)).
 
 ## Results (v2)
 
@@ -62,7 +63,7 @@ PYTHONPATH=. .venv/bin/python -m view_classifier.app --share
 ```
 
 Upload a photo or click a sample in `docs/demo_images/`. Needs checkpoint  
-`artifacts/joint_v2_zenodo_crop/view_classifier_best.pt` (local, gitignored).
+`models/joint_v2_best.pt` (Git LFS — run `git lfs pull` after clone).
 
 ### Notebook walkthrough
 
@@ -109,7 +110,7 @@ PYTHONPATH=. .venv/bin/python -m view_classifier.auto_resume -- \
   --resume --out-dir artifacts/joint_v2_zenodo_crop
 ```
 
-Checkpoints: `view_classifier_best.pt` (best CFV val) and rolling `view_classifier_last.pt` (resume). Both are gitignored (~189–566 MB).
+Checkpoints: release weight `models/joint_v2_best.pt` (LFS); local `artifacts/*/view_classifier_last.pt` for resume only.
 
 ## License
 
