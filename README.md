@@ -12,6 +12,12 @@ The model predicts:
 Published evaluation numbers, figures, and demo outputs live under [`docs/`](docs/).  
 Release weights: [`models/joint_v2_best.pt`](models/joint_v2_best.pt) via **Git LFS**. Raw training data and `artifacts/` stay **out of git** (see [`.gitignore`](.gitignore)).
 
+## 🎬 Video walkthrough
+
+A 4-minute explainer of the model: the two-head architecture (8-bin pose + unit-circle angle), the combined loss (`CE(pose, label_smoothing=0.1) + 2.0 × angle_loss`), the AdamW + cosine schedule, and the two-phase freeze→unfreeze recipe:
+
+https://github.com/user-attachments/assets/66a7889e-34e0-40f7-906c-34365275411d
+
 ## Results (v2)
 
 | Run | Honest score |
